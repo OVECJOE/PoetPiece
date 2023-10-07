@@ -1,0 +1,43 @@
+.app-header {
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    padding: .5rem 1rem;
+
+    position: sticky;
+    z-index: 2;
+    top: 0;
+}
+
+.app-header .app-navbar > ul {
+    display: flex;
+    gap: 1rem;
+    list-style: none;
+    align-items: center;
+}
+
+.app-header a {
+    color: white;
+    padding: .5rem 1rem;
+    transition: color .5s ease-in-out;
+}
+
+.app-header a:hover {
+    color: #ccc;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+.app-header .app-logo {
+    height: 80px;
+    width: 80px;
+    object-fit: cover;
+}
+
+@media (max-width: 400px) {
+    .app-header {
+        position: static;
+    }
+}

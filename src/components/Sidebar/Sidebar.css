@@ -1,0 +1,27 @@
+.app-sidebar {
+    background-color: #ccc;
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    height: calc(100vh - 96px);
+    z-index: 1;
+    width: 200px;
+    overflow: hidden auto;
+    padding: 1rem .5rem;
+}
+
+.app-sidebar .menu-list {
+    margin: 2rem 0;
+}
+
+.app-sidebar .menu-list > h2 {
+    margin-bottom: 1rem;
+}
+
+.app-sidebar .menu-list .box {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    margin-top: 1rem;
+}

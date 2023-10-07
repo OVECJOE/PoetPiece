@@ -1,0 +1,10 @@
+.btn {
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.btn:hover {
+    background-color: #333;
+    color: #ccc;
+    transition: background-color .5s ease-in-out;
+}
