@@ -1,0 +1,23 @@
+export const poetryCategories = [
+    "All",
+    "Love",
+    "Nature",
+    "Spirituality",
+    "Social Justice",
+    "Politics",
+    "Family",
+    "Friendship",
+    "Religion",
+    "War",
+    "Death",
+    "Hope",
+    "Faith",
+    "Humor",
+    "Sadness",
+    "Melancholy",
+    "Nostalgia",
+    "Travel",
+    "Food",
+    "Sports",
+    "Art"
+];

@@ -3,7 +3,7 @@ import { useState } from "react";
 
 import Button from "../Button/Button";
 import "./Sidebar.css";
-import { categories } from "../../assets/constants";
+import { poetryCategories } from "../../constants";
 
 const Sidebar = () => {
     const [showSidebar, setShowSidebar] = useState(true);
@@ -14,7 +14,7 @@ const Sidebar = () => {
                 <div className="menu-list">
                     <h4>Categories</h4>
                     <div className="box categories-box">
-                        {categories.map((category, index) => {
+                        {poetryCategories.map((category, index) => {
                             return (
                                 <Button
                                     key={index}
