@@ -1,18 +1,18 @@
 import PropTypes from "prop-types";
 import "./Button.css";
 
-const Button = ({ text, type, style }) => {
+const Button = ({ children, type, className }) => {
   return (
-    <button className="btn" style={style} type={type ?? "button"}>
-      {text}
+    <button className={`btn ${className}`} type={type ?? "button"}>
+      {children}
     </button>
   );
 };
 
 Button.propTypes = {
-  text: PropTypes.string.isRequired,
+  children: PropTypes.node.isRequired,
   type: PropTypes.string,
-  style: PropTypes.object,
+  className: PropTypes.string,
 };
 
 export default Button;

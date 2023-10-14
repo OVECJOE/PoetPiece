@@ -1,10 +1,64 @@
 .btn {
     cursor: pointer;
     font-weight: 500;
+    border: none;
+    background-color: #fff;
+}
+
+.btn.border {
+    border: 1px solid #ccc;
+}
+
+.btn.hidden {
+    display: none;
 }
 
 .btn:hover {
     background-color: #333;
     color: #ccc;
     transition: background-color .5s ease-in-out;
+}
+
+.btn.transparent {
+    background-color: transparent;
+    color: #ccc;
+}
+
+.btn.primary-inverse {
+    background-color: #333;
+    color: #ccc;
+}
+
+.btn.primary {
+    background-color: #ccc;
+    color: #333;
+}
+
+.btn.primary-dark-mode {
+    background-color: #000;
+    color: #fff;
+}
+
+.btn.rounded {
+    border-radius: 3px;
+}
+
+.btn.rounded-1 {
+    border-radius: 5px;
+}
+
+.btn-rounded-full {
+    border-radius: 50%;
+}
+
+.btn.padding-half {
+    padding: .25rem .5rem;
+}
+
+.btn.padding-1 {
+    padding: .5rem 1rem;
+}
+
+.btn.padding-2 {
+    padding: 1rem 2rem;
 }

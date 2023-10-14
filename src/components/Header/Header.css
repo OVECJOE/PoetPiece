@@ -4,7 +4,7 @@
     justify-content: space-between;
     align-items: center;
     gap: 1rem;
-    padding: .5rem 1rem;
+    padding: .5rem 1.5rem;
 
     position: sticky;
     z-index: 2;
@@ -13,21 +13,33 @@
 
 .app-header .app-navbar > ul {
     display: flex;
-    gap: 1rem;
+    gap: 1.5rem;
     list-style: none;
     align-items: center;
 }
 
-.app-header a {
-    color: white;
+.app-header .app-navbar .nav-item a.active {
+    background-color: #ccc;
+    color: #222;
+    border-radius: 3px;
     padding: .5rem 1rem;
-    transition: color .5s ease-in-out;
+    pointer-events: none;
 }
 
-.app-header a:hover {
-    color: #ccc;
-    border: 1px solid #ccc;
-    border-radius: 3px;
+.app-header a {
+    color: white;
+}
+
+.app-header a::after {
+    transition: all .2s ease-in;
+}
+
+.app-header a:hover::after {
+    content: "";
+    display: block;
+    height: 2px;
+    width: 100%;
+    background-color: #ccc;
 }
 
 .app-header .app-logo {
@@ -36,8 +48,66 @@
     object-fit: cover;
 }
 
-@media (max-width: 400px) {
+@media (max-width: 700px) {
     .app-header {
         position: static;
+    }
+
+    .app-header a:hover::after {
+        display: none;
+    }
+
+    .app-header .app-navbar {
+        position: relative;
+    }
+
+    .app-header .app-navbar .nav-menu {
+        display: block;
+        border-radius: 3px;
+    }
+
+    .app-header .app-navbar > ul::before {
+        content: '';
+        position: absolute;
+        width: 15px;
+        top: -6px;
+        right: 20px;
+        height: 15px;
+        background-color: #000;
+        transform: rotate(45deg);
+        z-index: -1;
+        box-shadow: -1px -1px 2px #ccc;
+    }
+
+    .app-header .app-navbar > ul {
+        display: flex;
+        gap: 0;
+        flex-direction: column;
+        background-color: #000;
+        color: #ccc;
+        position: absolute;
+        right: 0;
+        top: 110%;
+        z-index: 2;
+        border-radius: 5px;
+        padding: .2rem;
+        box-shadow: 1px 1px 2px 1px #ccc;
+        min-width: 100%;
+        width: 150px;
+    }
+
+    .app-navbar > ul .nav-item {
+        width: 100%;
+        text-align: center;
+    }
+
+    .app-navbar > ul .nav-item > a {
+        display: block;
+        padding-block: 1rem;
+    }
+
+    .app-header .app-navbar .nav-item a.active {
+        border-radius: 0;
+        border-bottom: none;
     }
 }

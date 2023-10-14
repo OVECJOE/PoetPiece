@@ -1,3 +1,7 @@
 .App > main {
     position: relative;
 }
+
+.App .hidden {
+    display: none;
+}

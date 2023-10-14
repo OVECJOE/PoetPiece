@@ -18,14 +18,8 @@ const Sidebar = () => {
                             return (
                                 <Button
                                     key={index}
-                                    text={category}
-                                    type="button"
-                                    style={{
-                                        padding: "0.5rem 1rem",
-                                        border: "none",
-                                        borderRadius: "5px",
-                                    }}
-                                />
+                                    className='padding-1 rounded-1'
+                                >{category}</Button>
                             );
                         })}
                     </div>
